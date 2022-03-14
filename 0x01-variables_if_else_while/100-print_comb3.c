@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * main - Prints all possible combinations of two different digits 
+  * main - Prints combination of numbers
   *
   * Return: Always 0(Success)
   */
@@ -9,19 +9,20 @@ int main(void)
 {
 	int a, b;
 
-	a = b = '0';
-
 	for (a = '0'; a <= '9'; a++)
 	{
 		for (b = '0'; b <= '9'; b++)
 		{
-			putchar(a);
-			putchar(b);
-
-			if ((a != '8') || (a == '8' && b != '9'))
+			if (a < b)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(a);
+				putchar(b);
+
+				if (a != '8' || (a == '8' && b != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
