@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
 * main - prints the string putchar
 *
@@ -10,4 +9,4 @@ int main()
 	printf("_putchar\n");
 
 	return (0);
-}			
+}
